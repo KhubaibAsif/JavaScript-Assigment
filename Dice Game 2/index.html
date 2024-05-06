@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM AND FUNCTIONS</title>
+    <script defer src="app.js"></script>
+    <style>
+        * {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(rgba(189, 231, 3, 0.671),rgba(233, 3, 3, 0.747));
+
+}
+.main{
+    width: 80%;
+    height: 80vh;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(300px,50%));
+    background:linear-gradient(#10d109,#232427be) ;
+    
+
+}
+.box2{
+    display: flex;  
+    color: #0ef;
+    flex-direction: column;
+    align-items: center;
+    /* justify-content: space-evenly; */
+    font-size: 30px;
+    justify-content: space-evenly;
+}
+.box1{
+    /* height: 100px; */
+    /* width: 100px; */
+    font-size: clamp(20px,3vw,40px);
+    display: grid;
+    gap: 20px;
+    padding: 20px;
+    grid-template-columns: 1fr 1fr 1fr;
+    background-color: #1303f0;
+
+}
+.number{
+    background:linear-gradient(#0ef,#032152);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.result_box{
+    background: linear-gradient(#03c91ee1,#000000a1);
+    font-size: 25px;
+    padding: 30px;
+}
+    </style>
+</head>
+<body>
+    <div class="main">
+    <div class="box1">
+        <div onclick="checkNumber('1')" class="number">1</div>
+        <div onclick="checkNumber('2')" class="number">2</div>
+        <div onclick="checkNumber('3')" class="number">3</div>
+        <div onclick="checkNumber('4')" class="number">4</div>
+        <div onclick="checkNumber('5')" class="number">5</div>
+        <div onclick="checkNumber('6')" class="number">6</div>
+    </div>
+
+    <div class="box2">
+        <h4 id="">User Number</h4>
+        <h2 id="user_num">-</h2>
+        <h4>Result Number</h4>
+        <h2 id ="result_num">-</h2>
+    </div>
+</div>
+<div class="result_box" id="result_box"></div>
+</body>
+</html>
