@@ -1,31 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Text Editor</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
 
-<body>
-  
+  <body>
     <div class="editor-container">
-        <div class="toolbar">
-            <button id="boldButton" onclick="makeBold('bold')"><b>B</b></button>
-            <button id="italicButton" onclick="makeItalic('italic')"><i>I</i></button>
-            <button id="underlineButton" onclick="makeUnderline('underline')"><u>U</u></button>
-            <select id="" onchange="FontStyle('fontName', this.value)">
-                <option value="Arial">Arial</option>
-                <option value="Courier New">Courier New</option>
-                <option value="Georgia">Georgia</option>
-                <option value="Times New Roman">Times New Roman</option>
-                <option value="Verdana">Verdana</option>
-            </select>
-        </div>
-        <iframe name="editor" class="text-editor"></iframe>
+      <div class="toolbar">
+        <button class="action-btn"><b>B</b></button>
+        <button class="action-btn"><i>I</i></button>
+        <button class="action-btn"><u>U</u></button>
+        <select id="Font-Family">
+          <option value="Select Font-Family">Select Font-Family</option>
+          <option value="monospace">Mono Space</option>
+          <option value="Georgia">Georgia</option>
+          <option value="Times New Roman">Times New Roman</option>
+          <option value="Verdana">Verdana</option>
+        </select>
+      </div>
+    </div>
+    <div class="paraDiv">
+      <p id="text">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta culpa
+        a, alias quas ex quaerat error officia deserunt voluptates natus
+        distinctio recusandae architecto! Accusamus dolor tempore, aut
+        cupiditate omnis molestias laborum autem facere, modi, itaque placeat
+        temporibus sunt quis explicabo.
+      </p>
     </div>
     <script src="script.js"></script>
-</body>
-
+  </body>
 </html>

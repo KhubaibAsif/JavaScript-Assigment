@@ -1,25 +1,30 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
-    display: flex;
-    justify-content: center;
+    background-color: #7277c0e1;  
     align-items: center;
     height: 100vh;
     margin: 0;
+
   }
-  
+  .paraDiv{
+    color: #000000;
+  }
   .editor-container {
-    background-color: #ffffff;
+    background-color: #000000;
     border: 1px solid #ccc;
-    padding: 10px;
+    padding: 13px;
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
   }
   
   .toolbar {
     display: flex;
-    justify-content: space-around;
-    margin-bottom: 10px;
+    margin-bottom: 5px 10px;
+    flex-direction: row-reverse;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: center;
   }
   
   .toolbar button,
@@ -42,5 +47,8 @@ body {
     height: 300px;
     border: 1px solid #ccc;
     border-radius: 3px;
+  }
+  p{
+    text-align: center;
   }
   
