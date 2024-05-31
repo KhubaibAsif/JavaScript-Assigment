@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Population Records</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1>Enter Population Record</h1>
+    <form id="populationForm">
+      <label for="name">Name:</label>
+      <input type="text" id="name" required /><br /><br />
+
+      <label>Gender:</label>
+      <input type="radio" id="male" name="gender" value="male" required />
+      <label for="male">Male</label>
+      <input type="radio" id="female" name="gender" value="female" required />
+      <label for="female">Female</label><br /><br />
+
+      <label for="address">Address:</label>
+      <input type="text" id="address" required /><br /><br />
+
+      <label for="education">Education:</label>
+      <select id="education" required>
+        <option value="Matriculation">Matriculation</option>
+        <option value="Intermediate'">Intermediate</option>
+        <option value="Bachelor's">Bachelor's</option>
+        <option value="Master's">Master's</option></select
+      ><br /><br />
+
+      <label for="profession">Profession:</label>
+      <select id="profession" required>
+        <option value="Engineer">Engineer</option>
+        <option value="Doctor">Doctor</option>
+        <option value="Teacher">Teacher</option>
+        <option value="Programmer">Programmer</option></select
+      ><br /><br />
+
+      <button type="submit">Add Record</button>
+    </form>
+
+    <h2>Records</h2>
+    <ul id="recordsList"></ul>
+
+    <script src="app.js"></script>
+  </body>
+</html>
