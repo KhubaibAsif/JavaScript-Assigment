@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notes App</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        #loginPage, #homePage {
+            display: none;
+        }
+        .visible {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div id="loginPage" class="visible">
+        <h2>Login</h2>
+        <input type="email" id="emailInput" placeholder="Enter your email">
+        <button onclick="login()">Login</button>
+    </div>
+    <div id="homePage">
+        <h2>Home</h2>
+        <button onclick="logout()">Logout</button>
+        <h3>Notes</h3>
+        <input type="text" id="noteInput" placeholder="Enter your note">
+        <button onclick="submitNote()">Submit Note</button>
+        <div id="notesList"></div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
