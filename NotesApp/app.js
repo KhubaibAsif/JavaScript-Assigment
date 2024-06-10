@@ -61,4 +61,3 @@ function logout() {
     localStorage.removeItem('userEmail');
     showLoginPage();
 }
-
