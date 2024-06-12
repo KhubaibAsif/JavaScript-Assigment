@@ -8,15 +8,12 @@ body {
   align-items: center;
   height: 100vh;
 }
-
 .hidden {
   display: none;
 }
-
 .visible {
   display: block;
 }
-
 #authPage,
 #notesPage {
   background: white;
@@ -24,12 +21,10 @@ body {
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
-
 #authPage h1,
 #notesPage h1 {
   margin: 0 0 20px 0;
 }
-
 input[type="email"],
 input[type="text"] {
   width: 100%;
@@ -38,7 +33,6 @@ input[type="text"] {
   border: 1px solid #ccc;
   border-radius: 5px;
 }
-
 button {
   width: 100%;
   padding: 10px;
@@ -48,20 +42,16 @@ button {
   border-radius: 5px;
   cursor: pointer;
 }
-
 button:hover {
   background-color: #218838;
 }
-
 p {
   margin: 10px 0 0 0;
 }
-
 a {
   color: #007bff;
   text-decoration: none;
 }
-
 a:hover {
   text-decoration: underline;
 }
