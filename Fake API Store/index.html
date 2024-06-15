@@ -9,15 +9,22 @@
 
   <body>
     <header>
-    <h1>E-Commerce Store</h1>
-  </header>
-  <h2 class="h2-element">Items Added To Your Cart:</h2>
+      <h1>E-Commerce Store</h1>
+    </header>
+    
+    <!-- Search bar with Add to Cart button -->
+    <div class="search-bar">
+      <input type="text" id="search-input" placeholder="Search for products..." />
+      <button id="search-button">Search</button>
+      <button id="add-to-cart-button">Add to Cart</button>
+    </div>
+    
+    <h2 class="h2-element">Items Added To Your Cart:</h2>
     <div id="cart">
       <ul></ul>
     </div>
+    
     <div id="product-container"></div>
-    <div id="product-container"></div>
-
     
     <footer>
       <p>&copy; 2024 Fake Product Store. All rights reserved.</p>
@@ -26,4 +33,4 @@
 
     <script src="app.js"></script>
   </body>
-</html> 
+</html>

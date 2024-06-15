@@ -1,3 +1,5 @@
+
+
 document.addEventListener('DOMContentLoaded', () => {
     const productContainer = document.getElementById('product-container');
     const cartContainer = document.getElementById('cart').querySelector('ul');
@@ -14,6 +16,8 @@ document.addEventListener('DOMContentLoaded', () => {
             console.error('Error fetching products:', error);
         }
     };
+
+    
 
     const displayProducts = (products) => {
         products.forEach(product => {
