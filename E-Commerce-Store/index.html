@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Commerce Store</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header>
+        <h1>E-Commerce Store</h1>
+        <input type="text" id="searchInput" placeholder="Search...">
+        <button onclick="search()">Search</button>
+        <label for="priceFilter">Filter by Price:</label>
+        <input type="range" id="priceFilter" min="0" max="100" step="1" value="100" onchange="filterPrice()">
+        <span id="priceValue"></span>
+    </header>
+    <div id="products" class="products"></div>
+    <div id="cart" class="cart"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>

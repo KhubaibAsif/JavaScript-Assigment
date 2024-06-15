@@ -1,6 +1,5 @@
 // Check if the user is logged in when the page loads
 document.addEventListener('DOMContentLoaded', checkUserLogin);
-
 function register() {
     const email = document.getElementById('registerEmail').value;
     if (email) {
@@ -10,7 +9,6 @@ function register() {
         alert('Please enter a valid email.');
     }
 }
-
 function login() {
     const email = document.getElementById('loginEmail').value;
     const storedEmail = localStorage.getItem('userEmail');
@@ -20,7 +18,6 @@ function login() {
         alert('Invalid email or user does not exist. Please register.');
     }
 }
-
 function checkUserLogin() {
     const email = localStorage.getItem('userEmail');
     if (email) {
@@ -29,14 +26,12 @@ function checkUserLogin() {
         showAuthPage();
     }
 }
-
 function showAuthPage() {
     document.getElementById('authPage').classList.add('visible');
     document.getElementById('authPage').classList.remove('hidden');
     document.getElementById('notesPage').classList.add('hidden');
     document.getElementById('notesPage').classList.remove('visible');
 }
-
 function showNotesPage() {
     document.getElementById('authPage').classList.add('hidden');
     document.getElementById('authPage').classList.remove('visible');
@@ -44,21 +39,18 @@ function showNotesPage() {
     document.getElementById('notesPage').classList.remove('hidden');
     displayNotes();
 }
-
 function showLoginForm() {
     document.getElementById('loginForm').classList.remove('hidden');
     document.getElementById('loginForm').classList.add('visible');
     document.getElementById('registerForm').classList.add('hidden');
     document.getElementById('registerForm').classList.remove('visible');
 }
-
 function showRegisterForm() {
     document.getElementById('loginForm').classList.add('hidden');
     document.getElementById('loginForm').classList.remove('visible');
     document.getElementById('registerForm').classList.remove('hidden');
     document.getElementById('registerForm').classList.add('visible');
 }
-
 function submitNote() {
     const noteInput = document.getElementById('noteInput').value;
     if (noteInput) {
@@ -71,7 +63,6 @@ function submitNote() {
         alert('Please enter a note.');
     }
 }
-
 function displayNotes() {
     const notesList = document.getElementById('notesList');
     notesList.innerHTML = ''; // Clear the current list
@@ -82,7 +73,6 @@ function displayNotes() {
         notesList.appendChild(noteItem);
     });
 }
-
 function logout() {
     localStorage.removeItem('userEmail');
     showAuthPage();
