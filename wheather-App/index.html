@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tourist Destinations Weather</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+      }
+      .weather-container {
+        max-width: 400px;
+        margin: 40px auto;
+        padding: 20px;
+        border: 1px solid #ddd;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Select a Destination:</h1>
+    <select id="destination-select">
+      <!-- dynamically generate options -->
+    </select>
+    <div class="weather-container">
+      <h2 id="destination-name"></h2>
+      <img id="weather-img" src="" alt="Weather Icon" />
+      <p id="weather-description"></p>
+      <p id="temperature"></p>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
