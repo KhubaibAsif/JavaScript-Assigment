@@ -20,6 +20,7 @@ let products = [
     { id: 12, name: "SanDisk SSD PLUS 1TB Internal SSD - SATA III 6 Gb/s", price: 45.54, imageUrl: "https://c1.neweggimages.com/productimage/nb640/20-173-150-01.jpg" },
     // Add more products here as needed
 ];
+
 let cart = [];
 
 // Display products
