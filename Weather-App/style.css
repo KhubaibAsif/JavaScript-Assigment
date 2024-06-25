@@ -1,39 +1,60 @@
-* {
+/* Reset some basic styles */
+body,
+h1,
+h2,
+p,
+select {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-
 body {
+  background-image: url(https://images.unsplash.com/photo-1504608524841-42fe6f032b4b?q=80&w=1530&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D;);
+  background-color: #14171e;
   font-family: Arial, sans-serif;
-  background: linear-gradient(to right, #6dd5fa, #2980b9);
-  color: #fff;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
+  align-items: center;
   height: 100vh;
-  margin: 0;
+  color: #fff;
+}
+
+.container {
+  font-style: oblique;
+  text-align: center;
 }
 
 h1 {
-  font-size: 2.5rem;
+  margin-bottom: 20px;
+  font-size: 24px;
+  color: #ffffff;
+}
+
+.dropdown-container {
+  position: relative;
+  display: inline-block;
   margin-bottom: 20px;
 }
 
-#destination-select {
-  padding: 10px;
-  font-size: 1.2rem;
-  border-radius: 5px;
+.destination-select {
+  font-family: system-ui;
+  background-color: #2f2c2c;
+  color: #fff;
   border: none;
-  outline: none;
-  margin-bottom: 20px;
+  padding: 10px;
+  border-radius: 10px;
+  font-size: 16px;
   cursor: pointer;
+  width: 300px;
+}
+
+.destination-select:focus {
+  outline: none;
 }
 
 .weather-container {
-  background: linear-gradient(135deg, #86e5f7, #005f71);
+  background: rgba(255, 255, 255, 0.2);
   padding: 20px;
   border-radius: 10px;
   text-align: center;
@@ -44,14 +65,37 @@ h1 {
 #destination-name {
   font-size: 1.8rem;
   margin: 10px 0;
+  color: #fff;
 }
 
 #weather-img {
-  width: 100px;
-  height: 100px;
+  width: 64px;
+  height: 64px;
+  margin: 20px 0;
 }
 
-#weather-description, #temperature {
+#weather-description,
+#temperature {
   font-size: 1.2rem;
   margin: 5px 0;
+  color: #fff;
 }
+
+@media (max-width: 600px) {
+  .container {
+    width: 100%;
+    padding: 0 20px;
+  }
+
+  .weather-container {
+    width: 100%;
+    max-width: none;
+  }
+}
+
+/* @media (max-width: 600px) {
+  .destination-select {
+    width: 100px;
+    padding: 0 20px ;
+  } 
+} */
