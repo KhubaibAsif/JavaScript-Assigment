@@ -12,7 +12,7 @@ bash
 Copy code
 git clone https:https://github.com/KhubaibAsif/JavaScript-Assigments/tree/main-js
 
-Each assignment directory contains an index.html file along with its associated JavaScript file (script.js). Additional files may be included depending on the requirements of each assignment.
+Each assignment directory contains an index.html file along with its associated JavaScript file (script.js)/(app.js). Additional files may be included depending on the requirements of each assignment.
 
 Contributing
 If you'd like to contribute to this repository, feel free to fork it and submit a pull request with your changes. Contributions such as bug fixes, new features, or improvements are welcome.
