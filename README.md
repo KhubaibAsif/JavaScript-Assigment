@@ -8,7 +8,7 @@ License
 Getting Started
 To get started with this repository, you can either clone the repository using Git or download it as a ZIP archive.
 
-bash
+Bash
 Copy code
 git clone https:https://github.com/KhubaibAsif/JavaScript-Assigments/tree/main-js
 
