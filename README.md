@@ -10,7 +10,7 @@ To get started with this repository, you can either clone the repository using G
 
 Bash
 Copy code
-git clone https:https://github.com/KhubaibAsif/JavaScript-Assigments/tree/main-js
+Git clone https:https://github.com/KhubaibAsif/JavaScript-Assigments/tree/main-js
 
 Each assignment directory contains an index.html file along with its associated JavaScript file (script.js)/(app.js). Additional files may be included depending on the requirements of each assignment.
 
