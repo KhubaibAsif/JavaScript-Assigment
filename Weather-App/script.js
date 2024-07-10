@@ -1,4 +1,5 @@
-// script.js
+
+
 var touristDestinations = [
     { name: "" },
     { name: "Barishal", latitude: 36.3167, longitude: 74.65 },
