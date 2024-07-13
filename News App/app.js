@@ -1,4 +1,6 @@
 
+
+
 const generalBtn = document.getElementById("general");
 const businessBtn = document.getElementById("business");
 const sportsBtn = document.getElementById("sports");
@@ -12,9 +14,7 @@ const newsDetails = document.getElementById("newsDetails");
 
 // Array:
 var newsDataArr = [];
-
 // Apis:
-
 const API_KEY = "93b47a02a0e441bf8868cef61c7afed1";
 const HEADLINE_NEWS = "https://newsapi.org/v2/top-headlines?country=us&apiKey="
 const GENERAL_NEWS = "https://newsapi.org/v2/top-headlines?country=us&category=general&apiKey="
