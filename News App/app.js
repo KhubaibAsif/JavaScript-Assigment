@@ -34,38 +34,38 @@ const SEARCH_NEWS = "https://newsapi.org/v2/everything?q="
 // const TECHNOLOGY_NEWS = "https://gnews.io/api/v2/top-headlines?country=pk&category=technology&apiKey="
 // const SEARCH_NEWS = "https://gnews.io/api/v2/everything?q="
 
-window.onload = function(){
+window.onload = function () {
     newsType.innerHTML = "<h4>Headlines</h4>"
     fetchHeadlines();
 }
 
-generalBtn.addEventListener("click",function(){
+generalBtn.addEventListener("click", function () {
     newsType.innerHTML = "<h4>General News</h4>"
     fetchGeneralNews();
 })
 
-businessBtn.addEventListener("click",function(){
+businessBtn.addEventListener("click", function () {
     newsType.innerHTML = "<h4>Business</h4>"
     fetchBusinessNews();
 })
 
-sportsBtn.addEventListener("click",function(){
+sportsBtn.addEventListener("click", function () {
     newsType.innerHTML = "<h4>Sports</h4>"
     fetchSportsNews();
 })
 
-entertainmentBtn.addEventListener("click",function(){
+entertainmentBtn.addEventListener("click", function () {
     newsType.innerHTML = "<h4>Entertainment</h4>"
     fetchEntertainmentNews();
 })
 
-technologyBtn.addEventListener("click",function(){
+technologyBtn.addEventListener("click", function () {
     newsType.innerHTML = "<h4>Technology</h4>"
     fetchTechnologyNews();
 })
 
-searchBtn.addEventListener("click",function(){
-    newsType.innerHTML = "<h4>Search :"+newsQuery.value+"</h4>"
+searchBtn.addEventListener("click", function () {
+    newsType.innerHTML = "<h4>Search :" + newsQuery.value + "</h4>"
     fetchQueryNews();
 
 })
@@ -75,110 +75,110 @@ searchBtn.addEventListener("click",function(){
 const fetchHeadlines = async () => {
     const response = await fetch(HEADLINE_NEWS + API_KEY);
     newsDataArr = [];
-    if(response.status >=200 && response.status < 300){
+    if (response.status >= 200 && response.status < 300) {
         const myJson = await response.json();
         console.log(myJson)
         newsDataArr = myJson.articles
     }
-    else{
+    else {
         //handle errors
-        console.log(response.status,response.statusText);
+        console.log(response.status, response.statusText);
     }
     displayNews();
 }
 const fetchGeneralNews = async () => {
     const response = await fetch(GENERAL_NEWS + API_KEY);
     newsDataArr = [];
-    if(response.status >=200 && response.status < 300){
+    if (response.status >= 200 && response.status < 300) {
         const myJson = await response.json();
         console.log(myJson)
         newsDataArr = myJson.articles
     }
-    else{
+    else {
         //handle errors
-        console.log(response.status,response.statusText);
+        console.log(response.status, response.statusText);
     }
     displayNews();
 }
 const fetchBusinessNews = async () => {
     const response = await fetch(BUSINESS_NEWS + API_KEY);
     newsDataArr = [];
-    if(response.status >=200 && response.status < 300){
+    if (response.status >= 200 && response.status < 300) {
         const myJson = await response.json();
         console.log(myJson)
         newsDataArr = myJson.articles
     }
-    else{
+    else {
         //handle errors
-        console.log(response.status,response.statusText);
+        console.log(response.status, response.statusText);
     }
     displayNews();
 }
 const fetchSportsNews = async () => {
     const response = await fetch(SPORTS_NEWS + API_KEY);
     newsDataArr = [];
-    if(response.status >=200 && response.status < 300){
+    if (response.status >= 200 && response.status < 300) {
         const myJson = await response.json();
         console.log(myJson)
         newsDataArr = myJson.articles
     }
-    else{
+    else {
         //handle errors
-        console.log(response.status,response.statusText);
+        console.log(response.status, response.statusText);
     }
     displayNews();
 }
 const fetchEntertainmentNews = async () => {
     const response = await fetch(ENTERTAINMENT_NEWS + API_KEY);
     newsDataArr = [];
-    if(response.status >=200 && response.status < 300){
+    if (response.status >= 200 && response.status < 300) {
         const myJson = await response.json();
         console.log(myJson)
         newsDataArr = myJson.articles
     }
-    else{
+    else {
         //handle errors
-        console.log(response.status,response.statusText);
+        console.log(response.status, response.statusText);
     }
     displayNews();
 }
 const fetchTechnologyNews = async () => {
     const response = await fetch(TECHNOLOGY_NEWS + API_KEY);
     newsDataArr = [];
-    if(response.status >=200 && response.status < 300){
+    if (response.status >= 200 && response.status < 300) {
         const myJson = await response.json();
         console.log(myJson)
         newsDataArr = myJson.articles
     }
-    else{
+    else {
         //handle errors
-        console.log(response.status,response.statusText);
+        console.log(response.status, response.statusText);
     }
     displayNews();
 }
 const fetchQueryNews = async () => {
 
-    if(newsQuery.value==null)
+    if (newsQuery.value == null)
         return
 
-    const response = await fetch(SEARCH_NEWS+encodeURIComponent(newsQuery.value)+"&apiKey="+ API_KEY);
+    const response = await fetch(SEARCH_NEWS + encodeURIComponent(newsQuery.value) + "&apiKey=" + API_KEY);
     newsDataArr = [];
-    if(response.status >=200 && response.status < 300){
+    if (response.status >= 200 && response.status < 300) {
         const myJson = await response.json();
         newsDataArr = myJson.articles
     }
-    else{
+    else {
         //handle errors
-        console.log(response.status,response.statusText);
+        console.log(response.status, response.statusText);
     }
     displayNews();
 }
 
-function displayNews(){
+function displayNews() {
 
     newsDetails.innerHTML = ""
 
-    if(newsDataArr.length == 0){
+    if (newsDataArr.length == 0) {
         newsDetails.innerHTML = "<h5>No Data Found</h5>"
         return
     }
@@ -195,9 +195,9 @@ function displayNews(){
         card.className = "p-2";
 
         var image = document.createElement('img');
-        image.setAttribute("height","matchparnt");
-        image.setAttribute("width","100%");
-        image.src=news.urlToImage;
+        image.setAttribute("height", "matchparnt");
+        image.setAttribute("width", "100%");
+        image.src = news.urlToImage;
 
         var cardBody = document.createElement('div');
 
@@ -215,7 +215,7 @@ function displayNews(){
 
         var link = document.createElement('a');
         link.className = "btn btn-dark";
-        link.setAttribute("target","_blank");
+        link.setAttribute("target", "_blank");
         link.href = news.url
         link.innerHTML = "Read more"
 
