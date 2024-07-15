@@ -69,9 +69,6 @@ searchBtn.addEventListener("click", function () {
     fetchQueryNews();
 
 })
-
-
-
 const fetchHeadlines = async () => {
     const response = await fetch(HEADLINE_NEWS + API_KEY);
     newsDataArr = [];
